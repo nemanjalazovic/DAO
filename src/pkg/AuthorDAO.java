@@ -31,16 +31,25 @@ public class AuthorDAO implements IAuthorDAO{
     {
       try {
     	  
-  		Scanner scanner = new Scanner(System.in);
+//firstly you have to make an class in which you save data about user_name and password  to make a connection to DB  	  
+    	  
+ // first way to make connection
+    	  
+    	  USER_PASS user_pass =  new USER_PASS();
+    	  
+// Another way to make a connection
+	  
+  		/*Scanner scanner = new Scanner(System.in);
+  		
   		
   		System.out.println("Please enter user_name to connect DB: ");
   		String USER= scanner.nextLine();
   		
   		System.out.println("Please enter password to connect DB: ");
-  		String PASS= scanner.nextLine();
+  		String PASS= scanner.nextLine();*/
   		     	  
           DriverManager.registerDriver(new Driver());
-          return DriverManager.getConnection(URL, USER, PASS);
+          return DriverManager.getConnection(URL, user_pass.getUSER(), user_pass.getPASS());
       } catch (SQLException ex) {
           throw new RuntimeException("Error connecting to the database", ex);
       }
@@ -242,7 +251,7 @@ public class AuthorDAO implements IAuthorDAO{
     public static void main(String[] args) throws SQLException {
         AuthorDAO dao = new AuthorDAO();
         
-        System.out.println(dao.getAuthor(3));
+       // System.out.println(dao.getAuthor(3));
         
         //System.out.println(dao.getAllAuthors());
         
@@ -269,7 +278,7 @@ public class AuthorDAO implements IAuthorDAO{
         //dao.writeMetaData(query2);
         
         
-        System.out.println(dao.getAllAuthors());
+        //System.out.println(dao.getAllAuthors());
 
         
         
