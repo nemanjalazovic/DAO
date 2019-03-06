@@ -46,8 +46,6 @@ public class AuthorDAO implements IAuthorDAO{
       }
     }
     
-    
-    
     @Override
 	public Author getAuthor(int id) {
 		Connection connection = AuthorDAO.getConnection();
@@ -67,8 +65,6 @@ public class AuthorDAO implements IAuthorDAO{
         }
     return null;
 	}
-
-
 
 	@Override
 	public ArrayList<Author> getAllAuthors() {
@@ -98,9 +94,6 @@ public class AuthorDAO implements IAuthorDAO{
         return null;
 	}
 
-
-
-
 	@Override
 	public boolean insertAuthor(Author author) {
 		AuthorDAO connector = new AuthorDAO();
@@ -119,9 +112,6 @@ public class AuthorDAO implements IAuthorDAO{
         }
         return false;
 	}
-
-
-
 
 	@Override
 	public boolean updateAuthor(Author author) {
@@ -142,8 +132,6 @@ public class AuthorDAO implements IAuthorDAO{
         return false;
 	}
 
-
-
 	@Override
 	public boolean deleteAuthor(int id) {
 		AuthorDAO connector = new AuthorDAO();
@@ -159,7 +147,6 @@ public class AuthorDAO implements IAuthorDAO{
         }
         return false;
 	}
-	
 	
 	@Override
 	public String GetVersion() throws SQLException {
@@ -181,7 +168,6 @@ public class AuthorDAO implements IAuthorDAO{
         return null;
 	}
 
-	
 	@Override
 	public void writeMultipleRows(String query) throws SQLException {
 		AuthorDAO connector = new AuthorDAO();
@@ -247,6 +233,7 @@ public class AuthorDAO implements IAuthorDAO{
     }
         
 	}
+	
 	
 
 	
