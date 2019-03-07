@@ -2,5 +2,6 @@
 org.eclipse.jdt.core.prefs
 .project
 USER_PASS.java
+.classpath
 /bin/
 
